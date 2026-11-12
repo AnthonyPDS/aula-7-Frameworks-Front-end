@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA MODA | Tailwind CSS - Atividade 02</title>
+    <!-- Importação do Tailwind CSS via Play CDN conforme apostila (pág. 41) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col">
+
+    <!-- =====================================================================
+         1. NAVBAR FIXA (Posicionamento: sticky, top-0, z-10 | Flexbox: flex, items-center, justify-between)
+         ===================================================================== -->
+    <header class="sticky top-0 z-10 bg-slate-900 text-white shadow-md">
+        <div class="w-full max-w-6xl mx-auto px-4 sm:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <span class="bg-indigo-600 text-white font-bold px-3 py-1 rounded-lg tracking-wider uppercase text-sm">
+                    AURA
+                </span>
+                <h1 class="text-xl font-bold tracking-wider">AURA MODA</h1>
+            </div>
+
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-300">
+                <a href="#lancamentos" class="hover:text-white">Lançamentos</a>
+                <a href="#categorias" class="hover:text-white">Categorias</a>
+                <a href="#beneficios" class="hover:text-white">Vantagens</a>
+            </nav>
+
+            <button class="bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold px-4 py-2 rounded-lg">
+                Sacola (2)
+            </button>
+        </div>
+    </header>
+
+    <!-- =====================================================================
+         2. HERO BANNER RESPONSIVO (Flexbox + Responsividade + Tipografia + Cores)
+         ===================================================================== -->
+    <section class="w-full max-w-6xl mx-auto px-4 sm:px-8 mt-8">
+        <div class="bg-slate-900 text-white p-6 sm:p-10 rounded-xl shadow-lg flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-700">
+            <div class="max-w-xl">
+                <span class="bg-amber-400 text-slate-900 text-xs font-bold uppercase px-3 py-1 rounded-full tracking-wider">
+                    Coleção Outono / Inverno
+                </span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-4">
+                    Estilo Urbano com Conforto Essencial
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base mb-6">
+                    Peças desenvolvidas com algodão de alta gramatura, cortes modernos e acabamento impecável para o seu dia a dia.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#lancamentos" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3 rounded-lg">
+                        Explorar Coleção
+                    </a>
+                    <a href="#categorias" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-6 py-3 rounded-lg border border-slate-600">
+                        Ver Ofertas
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bloco de Destaque Lateral (Sem necessidade de imagem externa) -->
+            <div class="w-full md:w-72 bg-slate-800 p-6 rounded-xl border border-slate-700 text-center">
+                <p class="text-xs uppercase tracking-wider text-indigo-400 font-bold mb-2">Cupom Exclusivo</p>
+                <p class="text-3xl font-bold text-white mb-2">20% OFF</p>
+                <p class="text-sm text-slate-400 mb-4">Em todo o site na primeira compra</p>
+                <div class="bg-slate-900 border border-dashed border-indigo-400 py-2 px-4 rounded-lg font-mono text-indigo-300 font-bold">
+                    TAILWIND20
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         3. CATEGORIAS EM GRID (Grid + Espaçamentos + Bordas)
+         ===================================================================== -->
+    <section id="categorias" class="w-full max-w-6xl mx-auto px-4 sm:px-8 mt-10">
+        <div class="flex items-center justify-between mb-6">
+            <h3 class="text-2xl font-bold text-slate-900">Categorias em Destaque</h3>
+            <span class="text-sm text-indigo-600 font-semibold">4 departamentos</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md">
+                <span class="text-xs font-bold uppercase text-indigo-600 tracking-wider">01 • Linha Heavy</span>
+                <h4 class="text-lg font-bold text-slate-900 mt-2 mb-1">Camisetas Oversized</h4>
+                <p class="text-sm text-slate-600">Malha penteada 260g com gola canelada estruturada.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md">
+                <span class="text-xs font-bold uppercase text-emerald-600 tracking-wider">02 • Inverno</span>
+                <h4 class="text-lg font-bold text-slate-900 mt-2 mb-1">Moletons &amp; Jaquetas</h4>
+                <p class="text-sm text-slate-600">Hoodies felpados e jaquetas corta-vento impermeáveis.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md">
+                <span class="text-xs font-bold uppercase text-amber-600 tracking-wider">03 • Utilitários</span>
+                <h4 class="text-lg font-bold text-slate-900 mt-2 mb-1">Calças Cargo &amp; Jeans</h4>
+                <p class="text-sm text-slate-600">Caimento reto confortável com bolsos laterais funcionais.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md">
+                <span class="text-xs font-bold uppercase text-rose-600 tracking-wider">04 • Complementos</span>
+                <h4 class="text-lg font-bold text-slate-900 mt-2 mb-1">Bonés &amp; Acessórios</h4>
+                <p class="text-sm text-slate-600">Dad hats, gorros minimalistas, meias e shoulder bags.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         4. VITRINE DE PRODUTOS (Grid Responsivo + Posicionamento relative/absolute)
+         ===================================================================== -->
+    <main id="lancamentos" class="w-full max-w-6xl mx-auto px-4 sm:px-8 mt-12 mb-12">
+        <div class="flex items-center justify-between mb-6">
+            <h3 class="text-2xl font-bold text-slate-900">Vitrine de Lançamentos</h3>
+            <span class="text-sm text-slate-500">Mostrando 4 produtos principais</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- Card Produto 1 -->
+            <article class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between p-5">
+                <div>
+                    <div class="relative w-full h-40 bg-slate-900 rounded-lg flex items-center justify-center mb-4">
+                        <span class="absolute top-3 right-3 bg-emerald-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            NOVO
+                        </span>
+                        <span class="text-slate-300 font-bold tracking-wider uppercase text-sm">Heavy Cotton Preta</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900">Camiseta Boxy Preta</h4>
+                    <p class="text-sm text-slate-600 mt-1 mb-4">100% Algodão Egípcio • P ao GG</p>
+                </div>
+                <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+                    <span class="text-lg font-bold text-slate-900">R$ 139,90</span>
+                    <button class="bg-slate-900 hover:bg-indigo-600 text-white text-xs font-bold px-4 py-2 rounded-lg uppercase">
+                        Comprar
+                    </button>
+                </div>
+            </article>
+
+            <!-- Card Produto 2 -->
+            <article class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between p-5">
+                <div>
+                    <div class="relative w-full h-40 bg-indigo-950 rounded-lg flex items-center justify-center mb-4">
+                        <span class="absolute top-3 right-3 bg-amber-400 text-slate-900 text-xs font-bold px-2 py-1 rounded-full">
+                            TOP 1
+                        </span>
+                        <span class="text-indigo-200 font-bold tracking-wider uppercase text-sm">Windbreaker Navy</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900">Jaqueta Corta-Vento Navy</h4>
+                    <p class="text-sm text-slate-600 mt-1 mb-4">Tecido impermeável com capuz</p>
+                </div>
+                <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+                    <span class="text-lg font-bold text-slate-900">R$ 289,90</span>
+                    <button class="bg-slate-900 hover:bg-indigo-600 text-white text-xs font-bold px-4 py-2 rounded-lg uppercase">
+                        Comprar
+                    </button>
+                </div>
+            </article>
+
+            <!-- Card Produto 3 -->
+            <article class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between p-5">
+                <div>
+                    <div class="relative w-full h-40 bg-amber-100 rounded-lg flex items-center justify-center mb-4 border border-amber-200">
+                        <span class="absolute top-3 right-3 bg-indigo-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            -15%
+                        </span>
+                        <span class="text-amber-900 font-bold tracking-wider uppercase text-sm">Cargo Sarja Areia</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900">Calça Cargo Utilitária</h4>
+                    <p class="text-sm text-slate-600 mt-1 mb-4">6 bolsos e ajuste elástico na barra</p>
+                </div>
+                <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+                    <span class="text-lg font-bold text-slate-900">R$ 219,90</span>
+                    <button class="bg-slate-900 hover:bg-indigo-600 text-white text-xs font-bold px-4 py-2 rounded-lg uppercase">
+                        Comprar
+                    </button>
+                </div>
+            </article>
+
+            <!-- Card Produto 4 -->
+            <article class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between p-5">
+                <div>
+                    <div class="relative w-full h-40 bg-slate-700 rounded-lg flex items-center justify-center mb-4">
+                        <span class="absolute top-3 right-3 bg-rose-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            INVERNO
+                        </span>
+                        <span class="text-slate-100 font-bold tracking-wider uppercase text-sm">Hoodie Essential</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900">Moletom Canguru Grafite</h4>
+                    <p class="text-sm text-slate-600 mt-1 mb-4">Felpado 3cabos de alta maciez</p>
+                </div>
+                <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+                    <span class="text-lg font-bold text-slate-900">R$ 249,90</span>
+                    <button class="bg-slate-900 hover:bg-indigo-600 text-white text-xs font-bold px-4 py-2 rounded-lg uppercase">
+                        Comprar
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- =====================================================================
+         5. RODAPÉ E VANTAGENS (Cores + Grid + Tipografia)
+         ===================================================================== -->
+    <footer id="beneficios" class="bg-slate-900 text-slate-300 mt-auto py-8 border-t border-slate-800">
+        <div class="w-full max-w-6xl mx-auto px-4 sm:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pb-8 border-b border-slate-800 text-center">
+                <div class="p-4 bg-slate-800 rounded-xl">
+                    <h5 class="text-white font-bold text-base mb-1">Frete Grátis Brasil</h5>
+                    <p class="text-xs text-slate-400">Para todos os pedidos acima de R$ 299,00</p>
+                </div>
+                <div class="p-4 bg-slate-800 rounded-xl">
+                    <h5 class="text-white font-bold text-base mb-1">Parcelamento em 6x</h5>
+                    <p class="text-xs text-slate-400">Sem juros no cartão ou 10% OFF via PIX</p>
+                </div>
+                <div class="p-4 bg-slate-800 rounded-xl">
+                    <h5 class="text-white font-bold text-base mb-1">Troca Fácil Garantida</h5>
+                    <p class="text-xs text-slate-400">Primeira troca grátis em até 30 dias</p>
+                </div>
+            </div>
+
+            <p class="text-center text-xs text-slate-500 mt-6">
+                © 2026 AURA MODA — Projeto desenvolvido com Tailwind CSS para a Atividade 02 (SENAI).
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
