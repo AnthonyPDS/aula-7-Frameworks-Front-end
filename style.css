@@ -1,0 +1,568 @@
+/* ==========================================================================
+   ATIVIDADE 01 - FRAMEWORKS FRONT-END (SENAI)
+   Tema: Home Page Loja de Roupas "AURA MODA"
+   Requisitos atendidos:
+   1. Arquivo externo style.css vinculado via <link> no index.html
+   2. 20 elementos com Box Model completo (Content, Padding, Border e Margin)
+   3. 20 propriedades de Flexbox aplicadas para organização responsiva
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f6;
+    color: #18181b;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   PARTE 1: 20 PROPRIEDADES DE FLEXBOX E LAYOUT RESPONSIVO
+   ========================================================================== */
+
+/* Container Geral da Página */
+.pagina-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;                  /* [FLEX 01] Ativa o Flexbox no wrapper geral */
+    flex-direction: column;         /* [FLEX 02] Organiza cabeçalho, main e rodapé em coluna */
+    gap: 28px;                      /* [FLEX 03] Espaçamento vertical entre os blocos da página */
+}
+
+.conteudo-principal {
+    display: flex;                  /* [FLEX 04] Transforma o main em Flex Container */
+    flex-direction: column;         /* [FLEX 05] Empilha as seções da loja verticalmente */
+    gap: 32px;                      /* [FLEX 06] Espaçamento entre as seções de produtos */
+}
+
+/* Seção 1: Barra do Topo (Elementos 01 a 04) */
+.flex-topo {
+    display: flex;                  /* [FLEX 07] Flex container para o cabeçalho */
+    flex-direction: row;            /* [FLEX 08] Alinha os itens do topo em linha horizontal */
+    flex-wrap: wrap;                /* [FLEX 09] Permite quebra de linha em telas menores */
+    justify-content: space-between; /* [FLEX 10] Distribui os elementos nas extremidades */
+    align-items: center;            /* [FLEX 11] Centraliza verticalmente no eixo transversal */
+    gap: 12px;                      /* [FLEX 12] Espaço entre os blocos do cabeçalho */
+    background-color: #111827;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+/* Seção 2: Categorias em Destaque (Elementos 05 a 08) */
+.flex-categorias {
+    display: flex;                  /* [FLEX 13] Flex container para os cards de categoria */
+    flex-direction: row;            /* [FLEX 14] Disposição horizontal dos cards */
+    flex-wrap: wrap;                /* [FLEX 15] Quebra automática para responsividade */
+    justify-content: center;        /* [FLEX 16] Centraliza os cards no eixo principal */
+    align-items: stretch;           /* [FLEX 17] Iguala a altura dos cards na mesma linha */
+}
+
+/* Seção 3: Vitrine de Lançamentos (Elementos 09 a 12) */
+.flex-vitrine {
+    display: flex;                  /* Flex container da vitrine */
+    flex-wrap: wrap;
+    justify-content: space-around;  /* [FLEX 18] Distribui espaço ao redor de cada produto */
+    align-items: flex-start;        /* [FLEX 19] Alinha os produtos pelo topo */
+}
+
+/* Seção 4: Ofertas de Temporada (Elementos 13 a 16) */
+.flex-ofertas {
+    display: flex;
+    flex-direction: row-reverse;    /* [FLEX 20] Inverte a ordem horizontal das ofertas */
+    flex-wrap: wrap;
+    justify-content: space-evenly;  /* Distribui espaço idêntico entre todos os itens */
+    align-items: center;
+}
+
+/* Seção 5: Benefícios e Rodapé (Elementos 17 a 20) */
+.flex-beneficios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;          /* Alinha as linhas do container no eixo transversal */
+}
+
+/* Propriedades Flexbox adicionais nos itens filhos para responsividade */
+.box-item {
+    flex-grow: 1;                   /* Permite que o card cresça para ocupar espaço livre */
+    flex-shrink: 1;                 /* Permite que o card encolha em telas menores */
+    flex-basis: 240px;              /* Define largura base ideal antes de quebrar a linha */
+}
+
+/* ==========================================================================
+   PARTE 2: BOX MODEL NOS 20 ELEMENTOS (CONTENT, PADDING, BORDER E MARGIN)
+   ========================================================================== */
+
+/* --- ELEMENTOS DA SEÇÃO 1 (TOPO) --- */
+
+.elemento-01 {
+    /* Content */
+    width: 240px;
+    min-height: 110px;
+    background-color: #1f2937;
+    color: #ffffff;
+    text-align: left;
+    /* Padding */
+    padding: 16px 20px;
+    /* Border */
+    border: 2px solid #f59e0b;
+    border-radius: 8px;
+    /* Margin */
+    margin: 8px;
+}
+
+.elemento-02 {
+    /* Content */
+    width: 320px;
+    min-height: 110px;
+    background-color: #1f2937;
+    color: #e5e7eb;
+    text-align: center;
+    /* Padding */
+    padding: 18px 22px;
+    /* Border */
+    border: 2px solid #374151;
+    border-radius: 8px;
+    /* Margin */
+    margin: 8px 10px;
+}
+
+.elemento-03 {
+    /* Content */
+    width: 260px;
+    min-height: 110px;
+    background-color: #312e81;
+    color: #e0e7ff;
+    text-align: center;
+    /* Padding */
+    padding: 16px 18px;
+    /* Border */
+    border: 2px dashed #818cf8;
+    border-radius: 8px;
+    /* Margin */
+    margin: 8px;
+}
+
+.elemento-04 {
+    /* Content */
+    width: 220px;
+    min-height: 110px;
+    background-color: #065f46;
+    color: #ecfdf5;
+    text-align: right;
+    /* Padding */
+    padding: 16px 20px;
+    /* Border */
+    border: 2px solid #34d399;
+    border-radius: 8px;
+    /* Margin */
+    margin: 8px;
+}
+
+/* --- ELEMENTOS DA SEÇÃO 2 (CATEGORIAS) --- */
+
+.elemento-05 {
+    /* Content */
+    width: 250px;
+    min-height: 170px;
+    background-color: #ffffff;
+    color: #111827;
+    /* Padding */
+    padding: 20px;
+    /* Border */
+    border: 2px solid #d1d5db;
+    border-top: 5px solid #111827;
+    border-radius: 10px;
+    /* Margin */
+    margin: 12px;
+}
+
+.elemento-06 {
+    /* Content */
+    width: 250px;
+    min-height: 170px;
+    background-color: #ffffff;
+    color: #111827;
+    /* Padding */
+    padding: 20px;
+    /* Border */
+    border: 2px solid #d1d5db;
+    border-top: 5px solid #2563eb;
+    border-radius: 10px;
+    /* Margin */
+    margin: 12px;
+}
+
+.elemento-07 {
+    /* Content */
+    width: 250px;
+    min-height: 170px;
+    background-color: #ffffff;
+    color: #111827;
+    /* Padding */
+    padding: 20px;
+    /* Border */
+    border: 2px solid #d1d5db;
+    border-top: 5px solid #d97706;
+    border-radius: 10px;
+    /* Margin */
+    margin: 12px;
+}
+
+.elemento-08 {
+    /* Content */
+    width: 250px;
+    min-height: 170px;
+    background-color: #ffffff;
+    color: #111827;
+    /* Padding */
+    padding: 20px;
+    /* Border */
+    border: 2px solid #d1d5db;
+    border-top: 5px solid #7c3aed;
+    border-radius: 10px;
+    /* Margin */
+    margin: 12px;
+}
+
+/* --- ELEMENTOS DA SEÇÃO 3 (VITRINE DE PRODUTOS) --- */
+
+.elemento-09 {
+    /* Content */
+    width: 260px;
+    min-height: 250px;
+    background-color: #ffffff;
+    color: #1f2937;
+    text-align: center;
+    /* Padding */
+    padding: 22px 18px;
+    /* Border */
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    /* Margin */
+    margin: 14px 10px;
+}
+
+.elemento-10 {
+    /* Content */
+    width: 260px;
+    min-height: 250px;
+    background-color: #ffffff;
+    color: #1f2937;
+    text-align: center;
+    /* Padding */
+    padding: 22px 18px;
+    /* Border */
+    border: 2px solid #bfdbfe;
+    border-radius: 12px;
+    /* Margin */
+    margin: 14px 10px;
+}
+
+.elemento-11 {
+    /* Content */
+    width: 260px;
+    min-height: 250px;
+    background-color: #ffffff;
+    color: #1f2937;
+    text-align: center;
+    /* Padding */
+    padding: 22px 18px;
+    /* Border */
+    border: 2px solid #fde68a;
+    border-radius: 12px;
+    /* Margin */
+    margin: 14px 10px;
+}
+
+.elemento-12 {
+    /* Content */
+    width: 260px;
+    min-height: 250px;
+    background-color: #ffffff;
+    color: #1f2937;
+    text-align: center;
+    /* Padding */
+    padding: 22px 18px;
+    /* Border */
+    border: 2px solid #d1d5db;
+    border-radius: 12px;
+    /* Margin */
+    margin: 14px 10px;
+}
+
+/* --- ELEMENTOS DA SEÇÃO 4 (OFERTAS DE TEMPORADA) --- */
+
+.elemento-13 {
+    /* Content */
+    width: 255px;
+    min-height: 165px;
+    background-color: #fffbeb;
+    color: #78350f;
+    /* Padding */
+    padding: 18px 20px;
+    /* Border */
+    border: 2px dashed #f59e0b;
+    border-radius: 10px;
+    /* Margin */
+    margin: 10px;
+}
+
+.elemento-14 {
+    /* Content */
+    width: 255px;
+    min-height: 165px;
+    background-color: #fef2f2;
+    color: #7f1d1d;
+    /* Padding */
+    padding: 18px 20px;
+    /* Border */
+    border: 2px dashed #ef4444;
+    border-radius: 10px;
+    /* Margin */
+    margin: 10px;
+}
+
+.elemento-15 {
+    /* Content */
+    width: 255px;
+    min-height: 165px;
+    background-color: #eff6ff;
+    color: #1e3a8a;
+    /* Padding */
+    padding: 18px 20px;
+    /* Border */
+    border: 2px dashed #3b82f6;
+    border-radius: 10px;
+    /* Margin */
+    margin: 10px;
+}
+
+.elemento-16 {
+    /* Content */
+    width: 255px;
+    min-height: 165px;
+    background-color: #f0fdf4;
+    color: #14532d;
+    /* Padding */
+    padding: 18px 20px;
+    /* Border */
+    border: 2px dashed #22c55e;
+    border-radius: 10px;
+    /* Margin */
+    margin: 10px;
+}
+
+/* --- ELEMENTOS DA SEÇÃO 5 (BENEFÍCIOS / RODAPÉ) --- */
+
+.elemento-17 {
+    /* Content */
+    width: 240px;
+    min-height: 130px;
+    background-color: #18181b;
+    color: #f4f4f5;
+    text-align: center;
+    /* Padding */
+    padding: 18px 16px;
+    /* Border */
+    border: 3px double #52525b;
+    border-radius: 8px;
+    /* Margin */
+    margin: 10px 8px;
+}
+
+.elemento-18 {
+    /* Content */
+    width: 240px;
+    min-height: 130px;
+    background-color: #18181b;
+    color: #f4f4f5;
+    text-align: center;
+    /* Padding */
+    padding: 18px 16px;
+    /* Border */
+    border: 3px double #52525b;
+    border-radius: 8px;
+    /* Margin */
+    margin: 10px 8px;
+}
+
+.elemento-19 {
+    /* Content */
+    width: 240px;
+    min-height: 130px;
+    background-color: #18181b;
+    color: #f4f4f5;
+    text-align: center;
+    /* Padding */
+    padding: 18px 16px;
+    /* Border */
+    border: 3px double #52525b;
+    border-radius: 8px;
+    /* Margin */
+    margin: 10px 8px;
+}
+
+.elemento-20 {
+    /* Content */
+    width: 240px;
+    min-height: 130px;
+    background-color: #18181b;
+    color: #f4f4f5;
+    text-align: center;
+    /* Padding */
+    padding: 18px 16px;
+    /* Border */
+    border: 3px double #10b981;
+    border-radius: 8px;
+    /* Margin */
+    margin: 10px 8px;
+}
+
+/* ==========================================================================
+   ESTILOS COMPLEMENTARES DE TIPOGRAFIA E COMPONENTES VISUAIS
+   ========================================================================== */
+
+.bloco-secao {
+    background-color: #ffffff;
+    padding: 24px;
+    border: 1px solid #e4e4e7;
+    border-radius: 12px;
+}
+
+.titulo-secao {
+    margin: 0 0 12px 10px;
+    font-size: 22px;
+    color: #111827;
+    border-left: 4px solid #111827;
+    padding-left: 12px;
+}
+
+.badge-num {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 3px 8px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.flex-topo .badge-num,
+.flex-beneficios .badge-num {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fde68a;
+}
+
+.box-item h1 {
+    font-size: 22px;
+    margin: 4px 0;
+    letter-spacing: 1px;
+}
+
+.box-item h3 {
+    font-size: 18px;
+    margin: 6px 0;
+}
+
+.box-item p {
+    font-size: 14px;
+    margin: 6px 0 10px 0;
+}
+
+.tag-acao {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+/* Blocos visuais representando as cores das peças (sem precisar de imagens externas) */
+.cor-amostra {
+    width: 100%;
+    height: 75px;
+    margin: 6px 0 12px 0;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.amostra-preta {
+    background-color: #18181b;
+    color: #ffffff;
+    border: 2px solid #3f3f46;
+}
+
+.amostra-azul {
+    background-color: #1e3a8a;
+    color: #dbeafe;
+    border: 2px solid #3b82f6;
+}
+
+.amostra-bege {
+    background-color: #d6c7b2;
+    color: #451a03;
+    border: 2px solid #a89f91;
+}
+
+.amostra-cinza {
+    background-color: #4b5563;
+    color: #f3f4f6;
+    border: 2px solid #9ca3af;
+}
+
+.preco {
+    display: inline-block;
+    font-size: 18px;
+    color: #111827;
+    background-color: #f3f4f6;
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+}
+
+.preco-oferta {
+    display: inline-block;
+    font-size: 15px;
+    padding: 6px 12px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES PARA MOBILE E TABLET)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .flex-topo,
+    .flex-categorias,
+    .flex-vitrine,
+    .flex-ofertas,
+    .flex-beneficios {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .box-item {
+        width: auto;
+        flex-basis: auto;
+        text-align: center;
+        margin: 8px 0;
+    }
+}
+

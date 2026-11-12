@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA MODA | Loja de Roupas - Atividade 01 (Box Model & Flexbox)</title>
+    <!-- 1. Inclusão do CSS de forma Externa através da tag <link> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="pagina-wrapper">
+
+        <!-- =================================================================
+             SEÇÃO 1: CABEÇALHO E BARRA DO TOPO (ELEMENTOS 01 A 04)
+             ================================================================= -->
+        <header class="secao-container flex-topo">
+            <div class="box-item elemento-01" id="elemento-01">
+                <span class="badge-num">Elemento 01</span>
+                <h1>AURA MODA</h1>
+                <p>Streetwear &amp; Essenciais</p>
+            </div>
+
+            <nav class="box-item elemento-02" id="elemento-02">
+                <span class="badge-num">Elemento 02</span>
+                <strong>Navegação Rápida</strong>
+                <p>Lançamentos • Masculino • Feminino • Inverno • Outlet</p>
+            </nav>
+
+            <div class="box-item elemento-03" id="elemento-03">
+                <span class="badge-num">Elemento 03</span>
+                <strong>Cupom Ativo</strong>
+                <p>Use <code>AURA15</code> para 15% OFF na 1ª compra</p>
+            </div>
+
+            <div class="box-item elemento-04" id="elemento-04">
+                <span class="badge-num">Elemento 04</span>
+                <strong>Minha Sacola (3)</strong>
+                <p>Total parcial: R$ 419,80</p>
+            </div>
+        </header>
+
+        <main class="conteudo-principal">
+
+            <!-- =================================================================
+                 SEÇÃO 2: CATEGORIAS EM DESTAQUE (ELEMENTOS 05 A 08)
+                 ================================================================= -->
+            <section class="bloco-secao">
+                <h2 class="titulo-secao">Categorias por Estilo</h2>
+                <div class="secao-container flex-categorias">
+                    <article class="box-item elemento-05" id="elemento-05">
+                        <span class="badge-num">Elemento 05</span>
+                        <h3>Camisetas Oversized</h3>
+                        <p>Algodão egípcio e gramatura pesada com caimento amplo.</p>
+                        <span class="tag-acao">Ver 24 peças →</span>
+                    </article>
+
+                    <article class="box-item elemento-06" id="elemento-06">
+                        <span class="badge-num">Elemento 06</span>
+                        <h3>Jaquetas &amp; Moletons</h3>
+                        <p>Corta-vento impermeáveis e hoodies flanelados.</p>
+                        <span class="tag-acao">Ver 18 peças →</span>
+                    </article>
+
+                    <article class="box-item elemento-07" id="elemento-07">
+                        <span class="badge-num">Elemento 07</span>
+                        <h3>Calças Cargo &amp; Jeans</h3>
+                        <p>Modelagem reta, wide leg e bolsos utilitários.</p>
+                        <span class="tag-acao">Ver 30 peças →</span>
+                    </article>
+
+                    <article class="box-item elemento-08" id="elemento-08">
+                        <span class="badge-num">Elemento 08</span>
+                        <h3>Acessórios Urbanos</h3>
+                        <p>Bonés dad hat, gorros de lã, meias e shoulder bags.</p>
+                        <span class="tag-acao">Ver 15 peças →</span>
+                    </article>
+                </div>
+            </section>
+
+            <!-- =================================================================
+                 SEÇÃO 3: VITRINE DE LANÇAMENTOS (ELEMENTOS 09 A 12)
+                 ================================================================= -->
+            <section class="bloco-secao">
+                <h2 class="titulo-secao">Vitrine de Lançamentos</h2>
+                <div class="secao-container flex-vitrine">
+                    <article class="box-item elemento-09" id="elemento-09">
+                        <span class="badge-num">Elemento 09</span>
+                        <div class="cor-amostra amostra-preta">NOVO</div>
+                        <h3>Camiseta Heavy Cotton Preta</h3>
+                        <p>100% Algodão 260g • Tamanhos P ao GG</p>
+                        <strong class="preco">R$ 129,90</strong>
+                    </article>
+
+                    <article class="box-item elemento-10" id="elemento-10">
+                        <span class="badge-num">Elemento 10</span>
+                        <div class="cor-amostra amostra-azul">MAIS VENDIDO</div>
+                        <h3>Jaqueta Corta-Vento Navy</h3>
+                        <p>Tecido repelente à água com capuz ajustável</p>
+                        <strong class="preco">R$ 289,90</strong>
+                    </article>
+
+                    <article class="box-item elemento-11" id="elemento-11">
+                        <span class="badge-num">Elemento 11</span>
+                        <div class="cor-amostra amostra-bege">EXCLUSIVO</div>
+                        <h3>Calça Cargo Utilitária Areia</h3>
+                        <p>Sarja premium com 6 bolsos e ajuste no tornozelo</p>
+                        <strong class="preco">R$ 219,90</strong>
+                    </article>
+
+                    <article class="box-item elemento-12" id="elemento-12">
+                        <span class="badge-num">Elemento 12</span>
+                        <div class="cor-amostra amostra-cinza">INVERNO</div>
+                        <h3>Moletom Hoodie Essential Mescla</h3>
+                        <p>Felpado interno macio e bolso canguru estruturado</p>
+                        <strong class="preco">R$ 249,90</strong>
+                    </article>
+                </div>
+            </section>
+
+            <!-- =================================================================
+                 SEÇÃO 4: OFERTAS DA COLEÇÃO DE INVERNO (ELEMENTOS 13 A 16)
+                 ================================================================= -->
+            <section class="bloco-secao">
+                <h2 class="titulo-secao">Ofertas Especiais de Temporada</h2>
+                <div class="secao-container flex-ofertas">
+                    <article class="box-item elemento-13" id="elemento-13">
+                        <span class="badge-num">Elemento 13</span>
+                        <h3>Tricô Gola Alta Minimal</h3>
+                        <p>Trama canelada térmica ideal para sobreposição.</p>
+                        <strong class="preco-oferta">De R$ 199 por R$ 149,00</strong>
+                    </article>
+
+                    <article class="box-item elemento-14" id="elemento-14">
+                        <span class="badge-num">Elemento 14</span>
+                        <h3>Sobretudo Lã Batida Grafite</h3>
+                        <p>Corte alfaiataria alongado com forro acetinado.</p>
+                        <strong class="preco-oferta">De R$ 459 por R$ 349,00</strong>
+                    </article>
+
+                    <article class="box-item elemento-15" id="elemento-15">
+                        <span class="badge-num">Elemento 15</span>
+                        <h3>Camisa Flanelada Xadrez</h3>
+                        <p>Toque macio escovado, perfeita aberta ou fechada.</p>
+                        <strong class="preco-oferta">De R$ 179 por R$ 129,00</strong>
+                    </article>
+
+                    <article class="box-item elemento-16" id="elemento-16">
+                        <span class="badge-num">Elemento 16</span>
+                        <h3>Pack 3 Camisetas Essenciais</h3>
+                        <p>Combo Preta + Branca + Verde Militar em algodão penteado.</p>
+                        <strong class="preco-oferta">De R$ 249 por R$ 179,00</strong>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- =================================================================
+             SEÇÃO 5: BENEFÍCIOS E RODAPÉ DA LOJA (ELEMENTOS 17 A 20)
+             ================================================================= -->
+        <footer class="bloco-secao">
+            <h2 class="titulo-secao">Vantagens de Comprar na Aura Moda</h2>
+            <div class="secao-container flex-beneficios">
+                <div class="box-item elemento-17" id="elemento-17">
+                    <span class="badge-num">Elemento 17</span>
+                    <h3>Frete Grátis Brasil</h3>
+                    <p>Em todas as compras acima de R$ 299,00.</p>
+                </div>
+
+                <div class="box-item elemento-18" id="elemento-18">
+                    <span class="badge-num">Elemento 18</span>
+                    <h3>1ª Troca por Nossa Conta</h3>
+                    <p>Até 30 dias após o recebimento sem burocracia.</p>
+                </div>
+
+                <div class="box-item elemento-19" id="elemento-19">
+                    <span class="badge-num">Elemento 19</span>
+                    <h3>Parcelamento Flexível</h3>
+                    <p>Em até 6x sem juros no cartão de crédito.</p>
+                </div>
+
+                <div class="box-item elemento-20" id="elemento-20">
+                    <span class="badge-num">Elemento 20</span>
+                    <h3>Desconto no PIX</h3>
+                    <p>Ganhe 10% OFF imediato pagando à vista.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
